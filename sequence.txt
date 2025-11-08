@@ -1,0 +1,52 @@
+real-time-stock-sentiment/
+│
+├── 📁 data/                  # Saara data yahan store hoga
+│   ├── raw/                 # Raw API data
+│   ├── processed/           # Cleaned data for modeling
+│   └── historical/          # Historical data files
+│
+├── 📁 src/                  # Source code - yeh humara main code folder hai
+│   ├── 📁 data_collection/  # Data fetch karne wala code
+│   │   ├── live_data.py
+│   │   ├── historical_data.py
+│   │   └── api_connector.py
+│   │
+│   ├── 📁 sentiment/        # Sentiment analysis modules
+│   │   ├── sentiment_analyzer.py
+│   │   └── news_collector.py
+│   │
+│   ├── 📁 models/           # ML models
+│   │   ├── train_model.py
+│   │   ├── predict.py
+│   │   └── model.pkl
+│   │
+│   ├── 📁 visualization/    # Charts aur graphs
+│   │   ├── charts.py
+│   │   └── dashboard.py
+│   │
+│   └── 📁 utils/            # Helper functions
+│       ├── config.py
+│       ├── logger.py
+│       └── helpers.py
+│
+├── 📁 notebooks/            # Jupyter notebooks for experimentation
+│   ├── EDA.ipynb
+│   ├── Model_Experiments.ipynb
+│   └── Sentiment_Analysis.ipynb
+│
+├── 📁 tests/                # Test cases
+│   ├── test_data_collection.py
+│   └── test_sentiment.py
+│
+├── 📁 logs/                 # Application logs
+│   └── app.log
+│
+├── 📁 docs/                 # Documentation
+│   ├── architecture.md
+│   └── setup_guide.md
+│
+├── app.py                   # Main Streamlit application
+├── requirements.txt         # All dependencies
+├── .env.example            # Environment variables template
+├── .gitignore              # Git ignore rules
+└── README.md               # Project documentation
