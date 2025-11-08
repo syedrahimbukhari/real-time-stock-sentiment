@@ -1,3 +1,8 @@
+# 🚧 Project Status: In Progress
+
+This project is currently under active development and not yet finalized.  
+Some components and features are still being improved, and certain modules (like data processing, documentation, and notebooks) are temporarily excluded from the repository.
+
 # 🚀 Real-Time Crypto Intelligence Platform
 
 A comprehensive real-time cryptocurrency analytics dashboard with AI-powered sentiment analysis and price predictions. Built with Python, Streamlit, and Binance API.
@@ -7,7 +12,8 @@ A comprehensive real-time cryptocurrency analytics dashboard with AI-powered sen
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)
 
 ## 📊 Live Demo
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-username-real-time-stock-sentiment.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](http://localhost:8501/)
+
 
 ## ✨ Features
 
