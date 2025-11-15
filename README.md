@@ -70,4 +70,8 @@ A professional-grade cryptocurrency analytics and trading intelligence platform 
 1. **Clone the repository**
    ```bash
    git clone https://github.com/your-username/advanced-crypto-intelligence.git
+<<<<<<< HEAD
    cd advanced-crypto-intelligence
+=======
+   cd advanced-crypto-intelligence
+>>>>>>> 4723ea0962bbf816268ef1b1326e4e78d866eaa5
