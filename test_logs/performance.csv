@@ -1,0 +1,6 @@
+timestamp,operation,duration_seconds,details
+2025-11-08T12:32:30.472570,data_fetch,0.45,{'symbols': 3}
+2025-11-08T12:36:38.937074,data_fetch,0.45,{'symbols': 3}
+2025-11-08T12:37:06.067664,data_fetch,0.45,{'symbols': 3}
+2025-11-08T12:47:08.871441,data_fetch,0.45,{'symbols': 3}
+2025-11-08T13:02:28.184678,data_fetch,0.45,{'symbols': 3}

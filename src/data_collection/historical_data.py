@@ -6,7 +6,7 @@ class HistoricalDataCollector:
         self.connector = BinanceConnector(api_key, api_secret)
 
     
-    def get_historical_data(self, symbol='BTCUSDT', interval='1h', days=90):
+    def get_historical_data(self, symbol='BTCUSDT', interval='1h', days=90):    
         """Fetch 90 days of historical data for analysis and modeling"""
         try:
             # Calculate start date

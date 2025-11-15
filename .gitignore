@@ -4,32 +4,12 @@ venv/
 stocks_env/
 .Python
 
-# ===== BYTECODE & CACHE =====
-__pycache__/
-*.py[cod]
-*.so
-
 # ===== API KEYS & SECRETS =====
 .env
 *.key
 *.pem
 .streamlit/secrets.toml
 
-# ===== DATA FILES =====
-data/raw/
-data/processed/
-*.csv
-*.pkl
-*.model
-*.json
-
-# ===== LOGS =====
-logs/
-*.log
-
 # ===== SYSTEM FILES =====
 .DS_Store
 Thumbs.db
-
-# ===== NOTEBOOK CHECKPOINTS =====
-*.ipynb_checkpoints/

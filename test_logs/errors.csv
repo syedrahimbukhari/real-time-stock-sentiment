@@ -1,0 +1,6 @@
+timestamp,error_type,error_message,context
+2025-11-08T12:32:30.476876,ValueError,Test error for logging,{'context': 'test_scenario'}
+2025-11-08T12:36:38.946394,ValueError,Test error for logging,{'context': 'test_scenario'}
+2025-11-08T12:37:06.079877,ValueError,Test error for logging,{'context': 'test_scenario'}
+2025-11-08T12:47:08.882000,ValueError,Test error for logging,{'context': 'test_scenario'}
+2025-11-08T13:02:28.197726,ValueError,Test error for logging,{'context': 'test_scenario'}

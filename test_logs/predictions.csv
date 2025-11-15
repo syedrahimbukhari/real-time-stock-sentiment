@@ -1,0 +1,6 @@
+timestamp,symbol,prediction,movement,confidence,probability_up,probability_down,features_used
+2025-11-08T12:32:30.458791,BTCUSDT,,UP 📈,0.75,0,0,[]
+2025-11-08T12:36:38.912204,BTCUSDT,,UP 📈,0.75,0,0,[]
+2025-11-08T12:37:06.032004,BTCUSDT,,UP 📈,0.75,0,0,[]
+2025-11-08T12:47:08.852451,BTCUSDT,,UP 📈,0.75,0,0,[]
+2025-11-08T13:02:28.164383,BTCUSDT,N/A,UP,0.75,0,0,[]

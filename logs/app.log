@@ -1,0 +1,90 @@
+2025-11-08 13:07:10,894 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:07:12,036 - StockSentimentTracker - INFO - USER_ACTION: model_loaded - {'status': 'success'}
+2025-11-08 13:07:13,070 - StockSentimentTracker - INFO - USER_ACTION: dashboard_initialized - {'timestamp': '2025-11-08T13:07:13.070244'}
+2025-11-08 13:07:13,304 - StockSentimentTracker - INFO - PERFORMANCE: live_data_fetch - 0.212s
+2025-11-08 13:07:15,149 - StockSentimentTracker - INFO - PREDICTION: BTCUSDT - DOWN DOWN - Confidence: 0.840
+2025-11-08 13:07:15,170 - StockSentimentTracker - INFO - PERFORMANCE: ml_prediction - 0.439s
+2025-11-08 13:07:30,551 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:07:31,524 - StockSentimentTracker - INFO - USER_ACTION: model_loaded - {'status': 'success'}
+2025-11-08 13:07:31,535 - StockSentimentTracker - INFO - USER_ACTION: dashboard_initialized - {'timestamp': '2025-11-08T13:07:31.535667'}
+2025-11-08 13:07:31,734 - StockSentimentTracker - INFO - PERFORMANCE: live_data_fetch - 0.181s
+2025-11-08 13:07:32,101 - StockSentimentTracker - INFO - PREDICTION: BTCUSDT - DOWN DOWN - Confidence: 0.830
+2025-11-08 13:07:32,111 - StockSentimentTracker - INFO - PERFORMANCE: ml_prediction - 0.293s
+2025-11-08 13:07:34,291 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:07:35,140 - StockSentimentTracker - INFO - USER_ACTION: model_loaded - {'status': 'success'}
+2025-11-08 13:07:35,150 - StockSentimentTracker - INFO - USER_ACTION: dashboard_initialized - {'timestamp': '2025-11-08T13:07:35.150214'}
+2025-11-08 13:07:35,329 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:07:35,351 - StockSentimentTracker - INFO - PERFORMANCE: live_data_fetch - 0.185s
+2025-11-08 13:07:36,769 - StockSentimentTracker - INFO - USER_ACTION: model_loaded - {'status': 'success'}
+2025-11-08 13:07:36,777 - StockSentimentTracker - INFO - USER_ACTION: dashboard_initialized - {'timestamp': '2025-11-08T13:07:36.777333'}
+2025-11-08 13:07:36,968 - StockSentimentTracker - INFO - PERFORMANCE: live_data_fetch - 0.171s
+2025-11-08 13:07:37,251 - StockSentimentTracker - INFO - PREDICTION: BTCUSDT - DOWN DOWN - Confidence: 0.830
+2025-11-08 13:07:37,258 - StockSentimentTracker - INFO - PERFORMANCE: ml_prediction - 0.214s
+2025-11-08 13:08:05,007 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:08:05,873 - StockSentimentTracker - INFO - USER_ACTION: model_loaded - {'status': 'success'}
+2025-11-08 13:08:05,882 - StockSentimentTracker - INFO - USER_ACTION: dashboard_initialized - {'timestamp': '2025-11-08T13:08:05.882946'}
+2025-11-08 13:08:06,083 - StockSentimentTracker - INFO - PERFORMANCE: live_data_fetch - 0.178s
+2025-11-08 13:08:06,326 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:08:07,187 - StockSentimentTracker - INFO - USER_ACTION: model_loaded - {'status': 'success'}
+2025-11-08 13:08:07,201 - StockSentimentTracker - INFO - USER_ACTION: dashboard_initialized - {'timestamp': '2025-11-08T13:08:07.201089'}
+2025-11-08 13:08:07,392 - StockSentimentTracker - INFO - PERFORMANCE: live_data_fetch - 0.170s
+2025-11-08 13:08:07,699 - StockSentimentTracker - INFO - PREDICTION: BTCUSDT - DOWN DOWN - Confidence: 0.906
+2025-11-08 13:08:07,707 - StockSentimentTracker - INFO - PERFORMANCE: ml_prediction - 0.241s
+2025-11-08 13:08:38,045 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:08:38,946 - StockSentimentTracker - INFO - USER_ACTION: model_loaded - {'status': 'success'}
+2025-11-08 13:08:38,956 - StockSentimentTracker - INFO - USER_ACTION: dashboard_initialized - {'timestamp': '2025-11-08T13:08:38.956364'}
+2025-11-08 13:08:39,159 - StockSentimentTracker - INFO - PERFORMANCE: live_data_fetch - 0.170s
+2025-11-08 13:08:39,449 - StockSentimentTracker - INFO - PREDICTION: BTCUSDT - DOWN DOWN - Confidence: 0.886
+2025-11-08 13:08:39,457 - StockSentimentTracker - INFO - PERFORMANCE: ml_prediction - 0.219s
+2025-11-08 13:15:14,981 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:15:32,449 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:15:48,791 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:16:05,035 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:16:21,300 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:16:35,302 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:16:35,438 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:16:44,681 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:16:52,072 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:16:59,811 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:05,227 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:11,817 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:14,467 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:30,944 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:39,152 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:41,692 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:44,178 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:50,121 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:17:56,482 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:02,829 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:09,048 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:15,730 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:22,312 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:28,600 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:34,907 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:41,230 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:47,743 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:18:54,104 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:00,321 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:06,639 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:12,945 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:19,181 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:25,495 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:31,775 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:38,104 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:44,402 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:50,691 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:19:56,845 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:02,994 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:09,701 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:15,988 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:22,305 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:28,740 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:34,937 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:41,858 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:48,510 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:20:54,795 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:21:00,995 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:21:07,267 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:21:13,648 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:21:20,029 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:21:26,297 - StockSentimentTracker - INFO - Logger initialized successfully

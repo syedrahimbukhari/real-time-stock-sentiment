@@ -1,0 +1,22 @@
+2025-11-08 12:32:30,440 - StockSentimentTracker - INFO - USER_ACTION: page_visit - {'page': 'dashboard', 'user_agent': 'test'}
+2025-11-08 12:32:30,454 - StockSentimentTracker - INFO - SENTIMENT: Positive - Polarity: 0.800
+2025-11-08 12:32:30,472 - StockSentimentTracker - INFO - PERFORMANCE: data_fetch - 0.450s
+2025-11-08 12:32:30,476 - StockSentimentTracker - ERROR - ERROR: ValueError - Test error for logging
+2025-11-08 12:36:38,885 - StockSentimentTracker - INFO - USER_ACTION: page_visit - {'page': 'dashboard', 'user_agent': 'test'}
+2025-11-08 12:36:38,898 - StockSentimentTracker - INFO - SENTIMENT: Positive - Polarity: 0.800
+2025-11-08 12:36:38,938 - StockSentimentTracker - INFO - PERFORMANCE: data_fetch - 0.450s
+2025-11-08 12:36:38,946 - StockSentimentTracker - ERROR - ERROR: ValueError - Test error for logging
+2025-11-08 12:37:06,008 - StockSentimentTracker - INFO - USER_ACTION: page_visit - {'page': 'dashboard', 'user_agent': 'test'}
+2025-11-08 12:37:06,023 - StockSentimentTracker - INFO - SENTIMENT: Positive - Polarity: 0.800
+2025-11-08 12:37:06,067 - StockSentimentTracker - INFO - PERFORMANCE: data_fetch - 0.450s
+2025-11-08 12:37:06,079 - StockSentimentTracker - ERROR - ERROR: ValueError - Test error for logging
+2025-11-08 12:47:08,801 - StockSentimentTracker - INFO - USER_ACTION: page_visit - {'page': 'dashboard', 'user_agent': 'test'}
+2025-11-08 12:47:08,839 - StockSentimentTracker - INFO - SENTIMENT: Positive - Polarity: 0.800
+2025-11-08 12:47:08,872 - StockSentimentTracker - INFO - PERFORMANCE: data_fetch - 0.450s
+2025-11-08 12:47:08,883 - StockSentimentTracker - ERROR - ERROR: ValueError - Test error for logging
+2025-11-08 13:02:28,121 - StockSentimentTracker - INFO - Logger initialized successfully
+2025-11-08 13:02:28,122 - StockSentimentTracker - INFO - USER_ACTION: page_visit - {'page': 'dashboard', 'user_agent': 'test'}
+2025-11-08 13:02:28,154 - StockSentimentTracker - INFO - SENTIMENT: Positive - Polarity: 0.800
+2025-11-08 13:02:28,164 - StockSentimentTracker - INFO - PREDICTION: BTCUSDT - UP - Confidence: 0.750
+2025-11-08 13:02:28,185 - StockSentimentTracker - INFO - PERFORMANCE: data_fetch - 0.450s
+2025-11-08 13:02:28,197 - StockSentimentTracker - ERROR - ERROR: ValueError - Test error for logging

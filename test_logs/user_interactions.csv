@@ -1,0 +1,6 @@
+timestamp,action,details
+2025-11-08T12:32:30.440276,page_visit,"{'page': 'dashboard', 'user_agent': 'test'}"
+2025-11-08T12:36:38.885692,page_visit,"{'page': 'dashboard', 'user_agent': 'test'}"
+2025-11-08T12:37:06.008010,page_visit,"{'page': 'dashboard', 'user_agent': 'test'}"
+2025-11-08T12:47:08.801911,page_visit,"{'page': 'dashboard', 'user_agent': 'test'}"
+2025-11-08T13:02:28.122499,page_visit,"{'page': 'dashboard', 'user_agent': 'test'}"
