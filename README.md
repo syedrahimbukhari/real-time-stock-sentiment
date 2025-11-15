@@ -1,77 +1,97 @@
 # 🚀 Advanced Crypto Intelligence Platform
 
-A professional-grade cryptocurrency analytics and trading intelligence platform with real-time market data, AI-powered predictions, portfolio management, and multi-source sentiment analysis.
+Professional cryptocurrency analytics platform with real-time market data, AI predictions, portfolio management, and sentiment analysis.
 
-![Crypto Dashboard](https://img.shields.io/badge/Platform-Professional%20Trading%20Analytics-blue)
-![Python](https://img.shields.io/badge/Python-3.8%2B-green)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.28%2B-red)
-![License](https://img.shields.io/badge/License-MIT-yellow)
-
-## 📊 Live Demo
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-app-name.streamlit.app/)
+![Live Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://real-time-stock-sentiment.streamlit.app/
 
 ## ✨ Features
 
-### 🎯 Core Analytics
-- **Real-time Price Tracking** - Live cryptocurrency prices from Binance API
-- **Advanced Technical Charts** - Interactive charts with RSI and Moving Averages
-- **Multi-Crypto Overview** - Market overview for 10+ major cryptocurrencies
-- **24H Statistics** - Accurate high/low prices, volume, and volatility metrics
+### 📊 Real-time Analytics
+- Live prices from **CoinGecko API** + Binance fallback
+- Advanced charts with RSI, Moving Averages, volume analysis
+- 24H statistics: high/low prices, volume, volatility
 
-### 🤖 AI-Powered Intelligence
-- **Advanced Prediction Engine** - AI-powered price predictions with confidence scoring
-- **Risk Assessment** - Low/Medium/High risk level indicators
-- **Multi-factor Analysis** - Trend, volatility, volume, and market position analysis
-- **Prediction History** - Track historical prediction performance
+### 🤖 AI Intelligence  
+- Price predictions with confidence scoring
+- Risk assessment (Low/Medium/High)
+- Multi-factor analysis: trends, volume, market position
 
 ### 💼 Portfolio Management
-- **Asset Tracking** - Add and monitor cryptocurrency investments
-- **Real-time P&L** - Live profit/loss calculations with percentage changes
-- **Portfolio Summary** - Total investment value and performance metrics
-- **Buy Price Tracking** - Track entry prices and current valuations
+- Track cryptocurrency investments
+- Real-time P&L calculations
+- Portfolio performance summary
 
-### 🔔 Smart Alerts System
-- **Custom Price Alerts** - Set alerts for price movements above/below targets
-- **Real-time Monitoring** - Automatic alert triggering with visual notifications
-- **Alert History** - Track triggered alerts with timestamps
-- **Multi-asset Support** - Alerts for all supported cryptocurrencies
+### 🔔 Smart Alerts
+- Custom price alerts (above/below targets)
+- Real-time monitoring & notifications
+- Multi-asset support
 
 ### 🌐 Market Intelligence
-- **Multi-Source Sentiment Analysis** - Aggregate sentiment from multiple sources
-- **News Integration** - Latest cryptocurrency news with sentiment scoring
-- **Watchlist Management** - Personalized cryptocurrency watchlist
-- **Market Overview** - Quick glance at multiple crypto performances
+- Multi-source sentiment analysis
+- Crypto news integration
+- Personalized watchlist
 
 ## 🛠️ Tech Stack
 
-**Frontend & Visualization:**
-- `Streamlit` - Reactive web application framework
-- `Plotly` - Interactive charts and technical indicators
-- `Custom CSS` - Professional styling with gradient themes
-
-**Backend & Data Processing:**
-- `Python 3.8+` - Core programming language
-- `Pandas` - Data manipulation and analysis
-- `NumPy` - Numerical computations and statistical analysis
-- `Requests` - HTTP API communication
-
-**Data Sources & APIs:**
-- `Binance API` - Real-time cryptocurrency market data
-- `Custom Algorithm` - Intelligent fallback demo data generation
+**Frontend:** `Streamlit`, `Plotly`, `Custom CSS`  
+**Backend:** `Python`, `Pandas`, `NumPy`, `Requests`  
+**Data Sources:** `CoinGecko API`, `Binance API`, `Intelligent Demo Data`
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Python 3.8 or higher
-- pip (Python package manager)
+```bash
+# Clone repository
+git clone https://github.com/syedrahimbukhari/real-time-stock-sentiment.git
+cd real-time-stock-sentiment
 
-### Installation
+# Install dependencies
+pip install -r requirements.txt
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/advanced-crypto-intelligence.git
-<<<<<<< HEAD
-   cd advanced-crypto-intelligence
-=======
-   cd advanced-crypto-intelligence
->>>>>>> 4723ea0962bbf816268ef1b1326e4e78d866eaa5
+# Launch application
+streamlit run app.py
+```
+
+**Access at:** `http://localhost:8501`
+
+### Requirements
+```text
+streamlit
+pandas
+numpy
+plotly
+requests
+textblob
+python-binance
+joblib
+```
+
+## 💡 Usage
+
+1. **Select cryptocurrency** from sidebar (10+ options)
+2. **Set refresh rate** (5s to 5min intervals)  
+3. **View real-time data** - prices, charts, statistics
+4. **Use AI features** - predictions, sentiment analysis
+5. **Manage portfolio** - track investments and P&L
+6. **Set alerts** - price movement notifications
+
+## 🔄 Data Sources
+
+- **Primary:** CoinGecko API (reliable & accessible)
+- **Fallback:** Binance API 
+- **Backup:** Intelligent demo data (realistic market simulation)
+
+## 🚨 Disclaimer
+
+**Educational use only.** Not financial advice. Cryptocurrency trading involves substantial risk.
+
+## 📞 Links
+
+- **Live App:** https://real-time-stock-sentiment.streamlit.app/
+- **GitHub:** https://github.com/syedrahimbukhari/real-time-stock-sentiment
+- **Issues:** https://github.com/syedrahimbukhari/real-time-stock-sentiment/issues
+
+---
+
+**Built for the crypto community** ❤️
+
+*Star the repo if you find it helpful!*
