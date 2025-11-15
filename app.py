@@ -225,18 +225,18 @@ class AdvancedCryptoDashboard:
         self.price_history = {}
         self.market_data = {}
         
-        # Extended crypto data with more assets
+        # Updated crypto data with CURRENT market prices (Nov 2024)
         self.crypto_data = {
-            "BTCUSDT": {"name": "Bitcoin", "base_price": 45000, "emoji": "₿", "category": "Large Cap"},
-            "ETHUSDT": {"name": "Ethereum", "base_price": 2500, "emoji": "Ξ", "category": "Large Cap"},
-            "BNBUSDT": {"name": "Binance Coin", "base_price": 300, "emoji": "ⓑ", "category": "Large Cap"},
-            "ADAUSDT": {"name": "Cardano", "base_price": 0.5, "emoji": "₳", "category": "Mid Cap"},
-            "SOLUSDT": {"name": "Solana", "base_price": 100, "emoji": "◎", "category": "Mid Cap"},
-            "DOTUSDT": {"name": "Polkadot", "base_price": 7, "emoji": "●", "category": "Mid Cap"},
-            "DOGEUSDT": {"name": "Dogecoin", "base_price": 0.15, "emoji": "🐕", "category": "Meme"},
-            "XRPUSDT": {"name": "Ripple", "base_price": 0.6, "emoji": "✕", "category": "Large Cap"},
-            "LTCUSDT": {"name": "Litecoin", "base_price": 75, "emoji": "Ł", "category": "Large Cap"},
-            "LINKUSDT": {"name": "Chainlink", "base_price": 15, "emoji": "🔗", "category": "Mid Cap"}
+            "BTCUSDT": {"name": "Bitcoin", "base_price": 95000, "emoji": "₿", "category": "Large Cap"},
+            "ETHUSDT": {"name": "Ethereum", "base_price": 3500, "emoji": "Ξ", "category": "Large Cap"},
+            "BNBUSDT": {"name": "Binance Coin", "base_price": 580, "emoji": "ⓑ", "category": "Large Cap"},
+            "ADAUSDT": {"name": "Cardano", "base_price": 0.45, "emoji": "₳", "category": "Mid Cap"},
+            "SOLUSDT": {"name": "Solana", "base_price": 150, "emoji": "◎", "category": "Mid Cap"},
+            "DOTUSDT": {"name": "Polkadot", "base_price": 6.5, "emoji": "●", "category": "Mid Cap"},
+            "DOGEUSDT": {"name": "Dogecoin", "base_price": 0.12, "emoji": "🐕", "category": "Meme"},
+            "XRPUSDT": {"name": "Ripple", "base_price": 0.52, "emoji": "✕", "category": "Large Cap"},
+            "LTCUSDT": {"name": "Litecoin", "base_price": 68, "emoji": "Ł", "category": "Large Cap"},
+            "LINKUSDT": {"name": "Chainlink", "base_price": 13, "emoji": "🔗", "category": "Mid Cap"}
         }
         
         # Initialize advanced sentiment analyzer
@@ -269,7 +269,7 @@ class AdvancedCryptoDashboard:
         prices = {}
         for symbol in symbols:
             try:
-                price = self.get_binance_price(symbol)
+                price = self.get_crypto_price(symbol)
                 prices[symbol] = price
             except Exception as e:
                 self.log_message(f"Error getting price for {symbol}: {str(e)}", "ERROR")
@@ -277,13 +277,102 @@ class AdvancedCryptoDashboard:
                 base_price = self.crypto_data[symbol]["base_price"]
                 prices[symbol] = base_price * (1 + np.random.uniform(-0.02, 0.02))
         return prices
+
+    def get_crypto_price(self, symbol):
+        """Get current price - Primary: CoinGecko, Fallback: Demo"""
+        try:
+            # Try CoinGecko first (works on Streamlit Cloud)
+            price = self.get_coingecko_price(symbol)
+            if price:
+                return price
+            
+            # If CoinGecko fails, try Binance
+            price = self.get_binance_price(symbol)
+            if price:
+                return price
+            
+            # If both APIs fail, use realistic demo data
+            return self.get_realistic_demo_price(symbol)
+            
+        except Exception as e:
+            self.log_message(f"❌ All price APIs failed, using demo data: {str(e)}", "ERROR")
+            return self.get_realistic_demo_price(symbol)
+
+    def get_coingecko_price(self, symbol):
+        """Get price from CoinGecko API (Works on Streamlit Cloud)"""
+        try:
+            # Map symbols to CoinGecko IDs
+            coin_mapping = {
+                "BTCUSDT": "bitcoin",
+                "ETHUSDT": "ethereum", 
+                "ADAUSDT": "cardano",
+                "SOLUSDT": "solana",
+                "DOTUSDT": "polkadot",
+                "DOGEUSDT": "dogecoin",
+                "XRPUSDT": "ripple",
+                "LTCUSDT": "litecoin",
+                "LINKUSDT": "chainlink",
+                "BNBUSDT": "binancecoin"
+            }
+            
+            coin_id = coin_mapping.get(symbol)
+            if coin_id:
+                url = f"https://api.coingecko.com/api/v3/simple/price?ids={coin_id}&vs_currencies=usd"
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+                }
+                response = requests.get(url, timeout=10, headers=headers)
+                if response.status_code == 200:
+                    data = response.json()
+                    if coin_id in data and 'usd' in data[coin_id]:
+                        price = data[coin_id]['usd']
+                        self.log_message(f"✅ CoinGecko price for {symbol}: ${price:,.2f}")
+                        return float(price)
+                else:
+                    self.log_message(f"❌ CoinGecko API returned status code: {response.status_code}", "WARNING")
+        except Exception as e:
+            self.log_message(f"❌ CoinGecko failed: {str(e)}", "WARNING")
+        
+        return None
+
+    def get_realistic_demo_price(self, symbol):
+        """Generate realistic demo price based on current market rates"""
+        # Current realistic market prices (Nov 2024)
+        current_market_prices = {
+            "BTCUSDT": 95000,
+            "ETHUSDT": 3500,
+            "BNBUSDT": 580, 
+            "ADAUSDT": 0.45,
+            "SOLUSDT": 150,
+            "DOTUSDT": 6.5,
+            "DOGEUSDT": 0.12,
+            "XRPUSDT": 0.52,
+            "LTCUSDT": 68,
+            "LINKUSDT": 13
+        }
+        
+        base_price = current_market_prices.get(symbol, 100)
+        
+        if symbol in self.price_history and len(self.price_history[symbol]) > 0:
+            last_price = self.price_history[symbol][-1]['price']
+            # Realistic crypto movement (0.1% to 3% change)
+            change = np.random.normal(0, 0.01)
+            new_price = last_price * (1 + change)
+        else:
+            # Start from current market price with small variation
+            new_price = base_price * (1 + np.random.uniform(-0.02, 0.02))
+        
+        return round(new_price, 2)
     
     def get_binance_24h_stats(self, symbol):
         """Get REAL 24h statistics from Binance"""
         try:
             self.log_message(f"Fetching 24h stats for {symbol} from Binance API")
             url = f"https://api.binance.com/api/v3/ticker/24hr?symbol={symbol}"
-            response = requests.get(url, timeout=5)
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            }
+            response = requests.get(url, timeout=5, headers=headers)
             
             if response.status_code == 200:
                 data = response.json()
@@ -294,7 +383,7 @@ class AdvancedCryptoDashboard:
                     'volume': float(data['volume']),
                     'price_change': float(data['priceChange']),
                     'price_change_percent': float(data['priceChangePercent']),
-                    'source': 'real'
+                    'source': 'binance'
                 }
             else:
                 raise Exception("API limit reached")
@@ -319,7 +408,10 @@ class AdvancedCryptoDashboard:
         try:
             self.log_message(f"Fetching current price for {symbol}")
             url = f"https://api.binance.com/api/v3/ticker/price?symbol={symbol}"
-            response = requests.get(url, timeout=5)
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+            }
+            response = requests.get(url, timeout=5, headers=headers)
             
             if response.status_code == 200:
                 data = response.json()
@@ -332,21 +424,12 @@ class AdvancedCryptoDashboard:
         except Exception:
             # Realistic demo price with trend
             self.log_message(f"⚠️ Using DEMO price for {symbol}", "WARNING")
-            base_price = self.crypto_data[symbol]["base_price"]
-            
-            if symbol in self.price_history and len(self.price_history[symbol]) > 0:
-                last_price = self.price_history[symbol][-1]['price']
-                change = np.random.normal(0, 0.005)
-                new_price = last_price * (1 + change)
-            else:
-                new_price = base_price * (1 + np.random.uniform(-0.05, 0.05))
-            
-            return round(new_price, 2)
+            return None
     
     def update_price_data(self, symbol, refresh_rate=10):
         """Update price data with realistic movement and volume variation"""
         self.log_message(f"Updating price data for {symbol}")
-        price = self.get_binance_price(symbol)
+        price = self.get_crypto_price(symbol)
         stats_24h = self.get_binance_24h_stats(symbol)
         
         if symbol not in self.price_history:
@@ -577,8 +660,18 @@ class AdvancedCryptoDashboard:
             st.metric("Volatility", f"{stats['volatility']:.2f}%")
         
         # Data source indicator
-        source_emoji = "🔴" if stats_24h.get('source') == 'real' else "🟡"
-        st.caption(f"{source_emoji} Data Source: {stats_24h.get('source', 'demo').upper()}")
+        source = stats_24h.get('source', 'demo')
+        if source == 'binance':
+            source_emoji = "🔵"
+            source_text = "BINANCE (LIVE)"
+        elif source == 'coingecko':
+            source_emoji = "🟢"
+            source_text = "COINGECKO (LIVE)"
+        else:
+            source_emoji = "🟡"
+            source_text = "DEMO DATA"
+        
+        st.caption(f"{source_emoji} Data Source: {source_text}")
     
     def check_alerts(self):
         """Check if any price alerts have been triggered"""
@@ -602,6 +695,12 @@ class AdvancedCryptoDashboard:
                         self.log_message(f"🚨 Alert triggered: {alert['symbol']} {alert['condition']} ${alert['price']}")
         
         return triggered_alerts
+
+# ========== REST OF THE CODE REMAINS THE SAME ==========
+# [The rest of your existing code for initialize_session_state, display_portfolio_section, 
+# display_alerts_section, display_watchlist_section, display_news_section, display_market_overview,
+# generate_prediction, display_prediction_section, display_sentiment_section, display_logs_section, main]
+# ...
 
 def initialize_session_state():
     """Initialize all session state variables"""
@@ -648,7 +747,10 @@ def initialize_session_state():
     if 'crypto_news' not in st.session_state:
         st.session_state.crypto_news = []
 
-# ========== NEW FEATURES ==========
+# [Rest of your existing functions remain exactly the same...]
+# display_portfolio_section, display_alerts_section, display_watchlist_section, 
+# display_news_section, display_market_overview, generate_prediction, 
+# display_prediction_section, display_sentiment_section, display_logs_section, main
 
 def display_portfolio_section():
     """Display portfolio management section"""
@@ -666,7 +768,7 @@ def display_portfolio_section():
             buy_price = st.number_input("Buy Price ($)", min_value=0.0, step=0.1)
             
             if st.form_submit_button("➕ Add to Portfolio"):
-                current_price = st.session_state.dashboard.get_binance_price(symbol)
+                current_price = st.session_state.dashboard.get_crypto_price(symbol)
                 total_invested = quantity * buy_price
                 current_value = quantity * current_price
                 pnl = current_value - total_invested
@@ -741,7 +843,7 @@ def display_alerts_section():
             price = st.number_input("Price ($)", min_value=0.0, step=0.1)
             
             if st.form_submit_button("➕ Create Alert"):
-                current_price = st.session_state.dashboard.get_binance_price(symbol)
+                current_price = st.session_state.dashboard.get_crypto_price(symbol)
                 alert = {
                     'symbol': symbol,
                     'condition': condition,
@@ -922,8 +1024,6 @@ def display_market_overview():
                     )
     
     st.markdown('</div>', unsafe_allow_html=True)
-
-# ========== EXISTING FUNCTIONS (Updated) ==========
 
 def generate_prediction(symbol, current_price, stats_24h):
     """Generate AI-powered price prediction"""
